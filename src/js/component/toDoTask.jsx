@@ -8,7 +8,12 @@ const ToDoTask = props => {
 				key={index}
 				className="list-group-item d-flex justify-content-between">
 				<div>{value}</div>
-				<div>x</div>
+				<div
+					onClick={() =>
+						props.setToDoList(props.toDoList.splice({ index }, 1))
+					}>
+					x
+				</div>
 			</li>
 		);
 	});
